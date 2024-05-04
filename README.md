@@ -2,7 +2,7 @@
 
 This was one of my Favorite Assignments from Spring 2024 that helped me understand Threading and Parallel Programming in Operating Systems.
 
-**<u>Description</u>**
+**Description**
 
 In order to study parallelism, we must have a problem that will take a significant amount
 of computation. We will generate images in the Mandelbrot set a well known fractal
@@ -36,7 +36,7 @@ here is the same area in the set computed with four different values of max:
 ./mandel -x 0.286932 -y 0.014287 -s .0005 -m 1000 -o mandel4.bmp
 ./mandel -x 0.286932 -y 0.014287 -s .0005 -m 2000 -o mandel5.bmp
 
-<u>Parallel Programming</u>
+**Parallel Programming:**
 What does this all have to do with operating systems? It can take a long time to
 compute a Mandelbrot image. The larger the image, the closer it is to the origin, and
 the higher the max value, the longer it will take. Suppose that you want to create a
@@ -44,7 +44,7 @@ movie of high resolution Mandelbrot images, and it is going to take a long time.
 job is to speed up the process by using multiple CPUs. You will do this in two different
 ways: using multiple processes and using multiple threads.
 
-<u>Find an Image: </u>
+**Find an Image:**
 Explore the Mandelbrot space a little bit, and find an interesting area. The more you
 zoom in, the more interesting it gets, so try to get -s down to 0.0001 or smaller. Play
 around with -m to get the right amount of detail. Find a configuration that takes about
@@ -52,7 +52,7 @@ around with -m to get the right amount of detail. Find a configuration that take
 second or two to create, then increase the size of the image using -W and -H, which will
 definitely make it run longer.
 
-<u>Multiple Threads: </u>
+**Multiple Threads:**
 Instead of running multiple programs at once, we can take a different approach of
 making each individual process faster by using multiple threads.
 Modify **mandel.c** to use an arbitrary number of threads to compute the image. Each
